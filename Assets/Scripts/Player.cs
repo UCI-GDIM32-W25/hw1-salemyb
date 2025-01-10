@@ -46,7 +46,7 @@ public class Player : MonoBehaviour
     {
         if(_numSeedsLeft > 0)
         {
-                Instantiate(_plantPrefab);
+                Instantiate(_plantPrefab, transform.position, Quaternion.identity);
                 _numSeedsLeft--;
                 _numSeedsPlanted++;
                 _plantCountUI.UpdateSeeds(_numSeedsLeft, _numSeedsPlanted);
